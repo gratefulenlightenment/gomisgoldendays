@@ -17,7 +17,7 @@
     max-width:820px;margin:0 auto;background:var(--cream);border:1px solid var(--line);
     border-radius:10px;padding:38px;box-shadow:0 22px 54px -34px rgba(58,58,56,.55);
   }
-  .calculator-form{display:grid;grid-template-columns:1fr .8fr 1.2fr;gap:18px;align-items:end;}
+  .calculator-form{display:grid;grid-template-columns:1fr .65fr .65fr 1.2fr;gap:18px;align-items:end;}
   .field label{display:block;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;
     color:var(--charcoal-soft);font-weight:500;margin-bottom:8px;}
   .field input,.field select{
@@ -311,8 +311,12 @@
             <input id="dog-name" name="dog-name" type="text" maxlength="30" placeholder="e.g., Gomi" autocomplete="off">
           </div>
           <div class="field">
-            <label for="dog-age">Age in years</label>
-            <input id="dog-age" name="dog-age" type="number" min="0.1" max="30" step="0.1" placeholder="e.g., 12" inputmode="decimal" required>
+            <label for="dog-years">Years</label>
+            <input id="dog-years" name="dog-years" type="number" min="0" max="30" step="1" value="0" inputmode="numeric" required>
+          </div>
+          <div class="field">
+            <label for="dog-months">Months</label>
+            <input id="dog-months" name="dog-months" type="number" min="0" max="11" step="1" value="0" inputmode="numeric" required>
           </div>
           <div class="field">
             <label for="dog-size">Adult weight</label>
@@ -510,16 +514,29 @@
 
     form.addEventListener('submit', event => {
       event.preventDefault();
-      const ageInput = document.getElementById('dog-age');
-      const dogAge = Number.parseFloat(ageInput.value);
+      const yearsInput = document.getElementById('dog-years');
+      const monthsInput = document.getElementById('dog-months');
+      const years = Number.parseInt(yearsInput.value, 10);
+      const months = Number.parseInt(monthsInput.value, 10);
 
-      if (!Number.isFinite(dogAge) || dogAge < 0.1 || dogAge > 30) {
-        ageInput.setCustomValidity('Please enter an age between 0.1 and 30 years.');
-        ageInput.reportValidity();
+      if (
+        !Number.isInteger(years) ||
+        !Number.isInteger(months) ||
+        years < 0 ||
+        years > 30 ||
+        months < 0 ||
+        months > 11 ||
+        (years === 0 && months === 0)
+      ) {
+        yearsInput.setCustomValidity('Please enter a valid age.');
+        yearsInput.reportValidity();
         return;
       }
-      ageInput.setCustomValidity('');
 
+      yearsInput.setCustomValidity('');
+      monthsInput.setCustomValidity('');
+
+      const dogAge = years + months / 12;
       const name = document.getElementById('dog-name').value.trim();
       const size = document.getElementById('dog-size').value;
       const equivalent = Math.round(humanAge(dogAge, size));
