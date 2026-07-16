@@ -90,7 +90,35 @@
   .nav-links{display:flex;gap:28px;font-size:.9rem;font-weight:400;}
   .nav-links a{color:var(--charcoal-soft);text-decoration:none;transition:color .2s;}
   .nav-links a:hover{color:var(--ochre-deep);}
-  @media(max-width:640px){.nav-links{display:none;}}
+  @media(max-width:640px){
+    nav .wrap{
+      height:auto;
+      padding-top:14px;
+      padding-bottom:10px;
+      flex-direction:column;
+      align-items:flex-start;
+      gap:10px;
+    }
+
+    .nav-links{
+      display:flex;
+      width:100%;
+      gap:18px;
+      overflow-x:auto;
+      white-space:nowrap;
+      padding-bottom:4px;
+      scrollbar-width:none;
+    }
+
+    .nav-links::-webkit-scrollbar{
+      display:none;
+    }
+
+    .nav-links a{
+      flex:0 0 auto;
+      font-size:.78rem;
+    }
+  }
 
   /* ---------- HERO ---------- */
   .hero{
