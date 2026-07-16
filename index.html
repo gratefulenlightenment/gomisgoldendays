@@ -7,6 +7,47 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  /* ---------- DOG AGE CALCULATOR ---------- */
+  .age-calculator{background:var(--cream-deep);}
+  .age-calculator .head{text-align:center;max-width:620px;margin:0 auto 38px;}
+  .age-calculator .head p{color:var(--charcoal-soft);font-size:1.02rem;}
+  .calculator-card{
+    max-width:820px;margin:0 auto;background:var(--cream);border:1px solid var(--line);
+    border-radius:10px;padding:38px;box-shadow:0 22px 54px -34px rgba(58,58,56,.55);
+  }
+  .calculator-form{display:grid;grid-template-columns:1fr .8fr 1.2fr;gap:18px;align-items:end;}
+  .field label{display:block;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;
+    color:var(--charcoal-soft);font-weight:500;margin-bottom:8px;}
+  .field input,.field select{
+    width:100%;height:50px;border:1px solid var(--line);border-radius:6px;background:#fff;
+    color:var(--charcoal);font-family:'Poppins',sans-serif;font-size:.95rem;padding:0 14px;
+    outline:none;transition:border-color .2s,box-shadow .2s;
+  }
+  .field input:focus,.field select:focus{border-color:var(--ochre);box-shadow:0 0 0 3px rgba(201,162,75,.14);}
+  .calculator-submit{margin-top:22px;text-align:center;}
+  .calculator-submit .btn{justify-content:center;min-width:230px;}
+  .calculator-result{
+    display:none;margin-top:30px;padding:30px 24px;text-align:center;border-radius:8px;
+    background:linear-gradient(145deg,rgba(201,162,75,.12),rgba(216,180,166,.13));
+    border:1px solid rgba(201,162,75,.28);
+  }
+  .calculator-result.show{display:block;animation:goldenReveal .38s ease-out;}
+  .result-age{font-family:'Lora',serif;font-size:1.25rem;color:var(--charcoal);margin-bottom:10px;}
+  .result-age strong{color:var(--ochre-deep);font-size:1.5rem;font-weight:600;}
+  .result-message{font-family:'Lora',serif;font-size:1.75rem;font-style:italic;line-height:1.25;
+    color:var(--ochre-deep);margin-bottom:10px;}
+  .result-note{font-size:.85rem;color:var(--charcoal-soft);}
+  .calculator-source{text-align:center;font-size:.74rem;color:var(--charcoal-soft);margin-top:20px;line-height:1.5;}
+  .calculator-source a{color:var(--charcoal-soft);}
+  @keyframes goldenReveal{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+  @media(max-width:720px){
+    .calculator-card{padding:28px 20px;}
+    .calculator-form{grid-template-columns:1fr;gap:14px;}
+    .calculator-submit .btn{width:100%;}
+    .result-message{font-size:1.5rem;}
+  }
+
 <style>
   :root{
     --cream:#FBF7F0;
@@ -195,6 +236,7 @@
     <div class="brand">Gomi's <span>Golden Days</span></div>
     <div class="nav-links">
       <a href="#story">Gomi's Story</a>
+      <a href="#age-calculator">Dog Age</a>
       <a href="#journal">The Journal</a>
       <a href="#favorites">Gomi's Favorites</a>
       <a href="#signup">Get Notified</a>
@@ -247,6 +289,49 @@
       </div>
       <p>That's when I knew: the time we have left is golden, and I want to record every bit of Gomi — who is <em>still</em> the Super Yorkie, even if she rests a little more often now and limps from time to time.</p>
       <p>So I picked the camera back up. And I started making this journal — not just for me, but to share these golden days with everyone who loves Gomi, and everyone loving a dog of their own.</p>
+    </div>
+  </div>
+</section>
+
+<!-- DOG AGE CALCULATOR -->
+<section class="age-calculator" id="age-calculator">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow">A Little Golden Fun</div>
+      <h2 class="section-title">How old is your dog in human years?</h2>
+      <p>The old “multiply by seven” rule misses a lot. Add your dog’s age and size for a more thoughtful estimate — then see what Gomi has to say about it.</p>
+    </div>
+    <div class="calculator-card">
+      <form id="dog-age-form" novalidate>
+        <div class="calculator-form">
+          <div class="field">
+            <label for="dog-name">Dog’s name</label>
+            <input id="dog-name" name="dog-name" type="text" maxlength="30" placeholder="e.g., Gomi" autocomplete="off">
+          </div>
+          <div class="field">
+            <label for="dog-age">Age in years</label>
+            <input id="dog-age" name="dog-age" type="number" min="0.1" max="30" step="0.1" placeholder="e.g., 12" inputmode="decimal" required>
+          </div>
+          <div class="field">
+            <label for="dog-size">Adult weight</label>
+            <select id="dog-size" name="dog-size" required>
+              <option value="small">Small · up to 20 lb / 9 kg</option>
+              <option value="medium">Medium · 21–50 lb / 9.5–23 kg</option>
+              <option value="large">Large · 51–90 lb / 23–41 kg</option>
+              <option value="giant">Giant · over 90 lb / 41 kg</option>
+            </select>
+          </div>
+        </div>
+        <div class="calculator-submit">
+          <button class="btn btn-primary" type="submit">Reveal the Golden Age ✨</button>
+        </div>
+      </form>
+      <div class="calculator-result" id="dog-age-result" role="status" aria-live="polite">
+        <p class="result-age" id="result-age"></p>
+        <p class="result-message" id="result-message"></p>
+        <p class="result-note">Every dog ages differently. Every day with them is golden.</p>
+      </div>
+      <p class="calculator-source">A playful estimate based on the <a href="https://www.aaha.org/wp-content/uploads/globalassets/02-guidelines/canine-life-stage-2019/canine_and_feline_age_chart_poster.pdf" target="_blank" rel="noopener">AAHA physiological age chart</a>. It is not veterinary advice.</p>
     </div>
   </div>
 </section>
@@ -383,6 +468,73 @@
     </div>
   </div>
 </footer>
+
+<script>
+  (() => {
+    const ageTable = {
+      small:  [0,15,24,28,32,36,40,44,48,52,56,60,64,68,72,76,80,84,88,92,96],
+      medium: [0,15,24,28,33,37,42,47,51,56,60,65,69,74,78,83,87,92,96,101,105],
+      large:  [0,15,24,30,35,40,45,50,55,61,66,72,77,82,88,93,99,104,109,115,120],
+      giant:  [0,15,24,32,37,42,49,56,64,71,78,86,93,101,108,115,123]
+    };
+
+    const form = document.getElementById('dog-age-form');
+    const result = document.getElementById('dog-age-result');
+    const resultAge = document.getElementById('result-age');
+    const resultMessage = document.getElementById('result-message');
+
+    function humanAge(dogAge, size) {
+      if (dogAge <= 0.5) return dogAge * 20;
+      if (dogAge < 1) return 10 + ((dogAge - 0.5) * 10);
+
+      const table = ageTable[size];
+      const whole = Math.floor(dogAge);
+      const fraction = dogAge - whole;
+
+      if (whole < table.length - 1) {
+        return table[whole] + ((table[whole + 1] - table[whole]) * fraction);
+      }
+
+      const lastIndex = table.length - 1;
+      const yearlyRate = table[lastIndex] - table[lastIndex - 1];
+      return table[lastIndex] + ((dogAge - lastIndex) * yearlyRate);
+    }
+
+    function goldenMessage(age) {
+      if (age <= 5) return 'You’re still a baby!';
+      if (age < 10) return 'You’re still young!';
+      return 'You’re not old. You’re SUPER—and GOLDEN!';
+    }
+
+    form.addEventListener('submit', event => {
+      event.preventDefault();
+      const ageInput = document.getElementById('dog-age');
+      const dogAge = Number.parseFloat(ageInput.value);
+
+      if (!Number.isFinite(dogAge) || dogAge < 0.1 || dogAge > 30) {
+        ageInput.setCustomValidity('Please enter an age between 0.1 and 30 years.');
+        ageInput.reportValidity();
+        return;
+      }
+      ageInput.setCustomValidity('');
+
+      const name = document.getElementById('dog-name').value.trim();
+      const size = document.getElementById('dog-size').value;
+      const equivalent = Math.round(humanAge(dogAge, size));
+      const subject = name || 'Your dog';
+
+      resultAge.textContent = `${subject} is about `;
+      const ageValue = document.createElement('strong');
+      ageValue.textContent = String(equivalent);
+      resultAge.append(ageValue, document.createTextNode(' in human years.'));
+      resultMessage.textContent = goldenMessage(dogAge);
+      result.classList.remove('show');
+      void result.offsetWidth;
+      result.classList.add('show');
+      result.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    });
+  })();
+</script>
 
 </body>
 </html>
