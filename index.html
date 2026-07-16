@@ -104,6 +104,14 @@
   *{margin:0;padding:0;box-sizing:border-box;}
   html{scroll-behavior:smooth;}
   picture{display:contents;}
+  .skip-link{
+    position:absolute;left:8px;top:-48px;z-index:100;
+    background:var(--ochre);color:#fff;
+    padding:8px 16px;border-radius:6px;text-decoration:none;
+    font-family:'Poppins',sans-serif;font-size:.9rem;font-weight:500;
+    transition:top .2s;
+  }
+  .skip-link:focus{top:8px;}
   body{
     font-family:'Poppins',sans-serif;
     background:var(--cream);
@@ -300,6 +308,7 @@
 </style>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
 
 <nav>
   <div class="wrap">
@@ -315,7 +324,7 @@
 </nav>
 
 <!-- HERO -->
-<header class="wrap">
+<header class="wrap" id="main" tabindex="-1">
   <div class="hero">
     <div class="hero-text">
       <div class="hero-eyebrow">A journal for the dogs we love</div>
@@ -418,7 +427,7 @@
           </div>
         </div>
         <div class="calculator-submit">
-          <button class="btn btn-primary" type="submit">Reveal the Golden Age ✨</button>
+          <button class="btn btn-primary" type="submit">Reveal the Golden Age <span aria-hidden="true">✨</span></button>
         </div>
       </form>
       <div class="calculator-result" id="dog-age-result" role="status" aria-live="polite">
@@ -439,7 +448,7 @@
         <div class="k">90-Day Memory &amp; Care Journal</div>
         <h3>Golden Days</h3>
         <div class="sub">for the ordinary days that are quietly becoming precious</div>
-        <svg class="paw" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="paw" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <ellipse cx="6" cy="9" rx="2" ry="2.6" fill="#C9A24B"/>
           <ellipse cx="18" cy="9" rx="2" ry="2.6" fill="#C9A24B"/>
           <ellipse cx="9.5" cy="6" rx="1.8" ry="2.3" fill="#C9A24B"/>
@@ -488,7 +497,7 @@
     </a>
     <a class="fav-card" href="https://amzn.to/4wAlUws" target="_blank" rel="noopener sponsored">
       <div class="body body-only">
-        <div class="fav-icon">🦴</div>
+        <div class="fav-icon"><span aria-hidden="true">🦴</span></div>
         <span class="pill">New</span>
         <h3>Freeze-Dried Food &amp; Treats</h3>
         <p>New! Freeze-dried dog food and treats that your pooch will love!</p>
@@ -541,7 +550,7 @@
     </a>
     <a class="fav-card" href="https://amzn.to/4fcC0Wa" target="_blank" rel="noopener sponsored">
       <div class="body body-only">
-        <div class="fav-icon">👁️</div>
+        <div class="fav-icon"><span aria-hidden="true">👁️</span></div>
         <h3>Soothing Eye Lube</h3>
         <p>My fur babies' eye health is a priority, and this eye lube makes it so easy to keep their eyes moist!</p>
         <span class="shop">Shop on Amazon →</span>
