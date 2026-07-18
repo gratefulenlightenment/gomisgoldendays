@@ -592,6 +592,24 @@
     const result = document.getElementById('dog-age-result');
     const resultAge = document.getElementById('result-age');
     const resultMessage = document.getElementById('result-message');
+    const yearsInput = document.getElementById('dog-years');
+    const monthsInput = document.getElementById('dog-months');
+
+    [yearsInput, monthsInput].forEach(input => {
+      input.addEventListener('focus', () => {
+        if (input.value === '0') input.value = '';
+      });
+
+      input.addEventListener('input', () => {
+        const normalized = input.value.replace(/^0+(?=\d)/, '');
+        if (input.value !== normalized) input.value = normalized;
+        input.setCustomValidity('');
+      });
+
+      input.addEventListener('blur', () => {
+        if (input.value === '') input.value = '0';
+      });
+    });
 
     function humanAge(dogAge, size) {
       if (dogAge <= 0.5) return dogAge * 20;
@@ -618,8 +636,8 @@
 
     form.addEventListener('submit', event => {
       event.preventDefault();
-      const yearsInput = document.getElementById('dog-years');
-      const monthsInput = document.getElementById('dog-months');
+      if (yearsInput.value === '') yearsInput.value = '0';
+      if (monthsInput.value === '') monthsInput.value = '0';
       const years = Number.parseInt(yearsInput.value, 10);
       const months = Number.parseInt(monthsInput.value, 10);
 
