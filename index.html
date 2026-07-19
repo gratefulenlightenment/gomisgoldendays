@@ -129,11 +129,28 @@
   .film .head{text-align:center;max-width:650px;margin:0 auto 34px;}
   .film .head p{color:var(--charcoal-soft);font-size:1.02rem;}
   .film-frame{
-    max-width:1080px;margin:0 auto;border-radius:10px;overflow:hidden;
+    position:relative;max-width:1080px;margin:0 auto;border-radius:10px;overflow:hidden;
     background:#211b17;border:1px solid rgba(58,58,56,.18);
     box-shadow:0 26px 60px -34px rgba(58,58,56,.72);
   }
   .film-frame video{display:block;width:100%;height:auto;aspect-ratio:16/9;background:#211b17;}
+  .film-play{
+    position:absolute;left:50%;top:50%;z-index:2;
+    width:88px;height:88px;border-radius:50%;border:2px solid rgba(255,255,255,.82);
+    background:rgba(39,31,25,.7);box-shadow:0 12px 34px rgba(0,0,0,.3);
+    transform:translate(-50%,-50%);cursor:pointer;
+    transition:opacity .2s,transform .2s,background .2s;
+  }
+  .film-play::before{
+    content:"";display:block;width:0;height:0;margin-left:31px;
+    border-top:14px solid transparent;border-bottom:14px solid transparent;
+    border-left:22px solid #fff;
+  }
+  .film-play:hover{background:rgba(183,132,31,.9);transform:translate(-50%,-50%) scale(1.06);}
+  .film-play:focus-visible{outline:3px solid #fff;outline-offset:4px;}
+  .film-frame.is-playing .film-play{
+    opacity:0;pointer-events:none;transform:translate(-50%,-50%) scale(.86);
+  }
   .film-credit{
     max-width:900px;margin:18px auto 0;text-align:center;
     color:var(--charcoal-soft);font-family:'Lora',serif;font-size:.82rem;font-style:italic;
@@ -317,6 +334,8 @@
     .film{padding:58px 0;}
     .film .head{margin-bottom:24px;}
     .film-frame{border-radius:6px;}
+    .film-play{width:64px;height:64px;}
+    .film-play::before{margin-left:23px;border-top-width:10px;border-bottom-width:10px;border-left-width:16px;}
     .film-credit{font-size:.76rem;line-height:1.65;padding:0 8px;}
   }
   @media(max-width:520px){.fav-grid{grid-template-columns:1fr;}}
@@ -372,6 +391,7 @@
       <p>A story about looking again at the ordinary days that were quietly becoming precious.</p>
     </div>
     <div class="film-frame">
+      <button class="film-play" type="button" aria-label="Play Gomi's Golden Days story film"></button>
       <video controls playsinline preload="none" poster="images/gomi-video-poster.jpg" aria-label="Gomi's Golden Days story film">
         <source src="videos/gomi-golden-days.mp4" type="video/mp4">
         Your browser does not support embedded video.
@@ -627,6 +647,26 @@
 
 <script>
   (() => {
+    const filmFrame = document.querySelector('.film-frame');
+    const filmVideo = filmFrame?.querySelector('video');
+    const filmPlay = filmFrame?.querySelector('.film-play');
+
+    if (filmVideo && filmPlay) {
+      const syncFilmPlayButton = () => {
+        const isPlaying = !filmVideo.paused && !filmVideo.ended;
+        filmFrame.classList.toggle('is-playing', isPlaying);
+        filmPlay.tabIndex = isPlaying ? -1 : 0;
+      };
+
+      filmPlay.addEventListener('click', () => {
+        const playback = filmVideo.play();
+        if (playback) playback.catch(syncFilmPlayButton);
+      });
+      filmVideo.addEventListener('play', syncFilmPlayButton);
+      filmVideo.addEventListener('pause', syncFilmPlayButton);
+      filmVideo.addEventListener('ended', syncFilmPlayButton);
+    }
+
     const ageTable = {
       small:  [0,15,24,28,32,36,40,44,48,52,56,60,64,68,72,76,80,84,88,92,96],
       medium: [0,15,24,28,33,37,42,47,51,56,60,65,69,74,78,83,87,92,96,101,105],
