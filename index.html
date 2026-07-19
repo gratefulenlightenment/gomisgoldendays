@@ -120,6 +120,26 @@
     font-size:.8rem;font-weight:400;padding:7px 14px;border-radius:100px;
     font-family:'Lora',serif;font-style:italic;
   }
+  /* ---------- FILM ---------- */
+  .film{
+    background:var(--cream-deep);
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+  }
+  .film .head{text-align:center;max-width:650px;margin:0 auto 34px;}
+  .film .head p{color:var(--charcoal-soft);font-size:1.02rem;}
+  .film-frame{
+    max-width:1080px;margin:0 auto;border-radius:10px;overflow:hidden;
+    background:#211b17;border:1px solid rgba(58,58,56,.18);
+    box-shadow:0 26px 60px -34px rgba(58,58,56,.72);
+  }
+  .film-frame video{display:block;width:100%;height:auto;aspect-ratio:16/9;background:#211b17;}
+  .film-credit{
+    max-width:900px;margin:18px auto 0;text-align:center;
+    color:var(--charcoal-soft);font-family:'Lora',serif;font-size:.82rem;font-style:italic;
+  }
+  .film-credit a{color:var(--ochre-deep);text-underline-offset:3px;}
+  .film-credit a:hover{color:var(--charcoal);}
   /* ---------- BUTTONS ---------- */
   .btn{
     display:inline-flex;align-items:center;gap:9px;
@@ -294,6 +314,10 @@
   
     .story-photos{grid-template-columns:1fr 1fr;}
     .story-photos picture:first-child img{grid-column:span 2;aspect-ratio:16/10;}
+    .film{padding:58px 0;}
+    .film .head{margin-bottom:24px;}
+    .film-frame{border-radius:6px;}
+    .film-credit{font-size:.76rem;line-height:1.65;padding:0 8px;}
   }
   @media(max-width:520px){.fav-grid{grid-template-columns:1fr;}}
 </style>
@@ -338,6 +362,28 @@
     </div>
   </div>
 </header>
+
+<!-- FILM -->
+<section class="film" id="film">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow">Gomi's Story, in Motion</div>
+      <h2 class="section-title">Why Golden Days Began</h2>
+      <p>A story about looking again at the ordinary days that were quietly becoming precious.</p>
+    </div>
+    <div class="film-frame">
+      <video controls playsinline preload="none" poster="images/gomi-video-poster.jpg" aria-label="Gomi's Golden Days story film">
+        <source src="videos/gomi-golden-days.mp4" type="video/mp4">
+        Your browser does not support embedded video.
+      </video>
+    </div>
+    <p class="film-credit">
+      Music:
+      <a href="https://www.youtube.com/watch?v=_KovWWNhNBI&amp;list=RDjDOgGK0VMmc&amp;index=2" target="_blank" rel="noopener">“We will Find Our Way – A Ho'oponopono Inspired Song”</a>
+      by <a href="https://www.youtube.com/@gratefulenlightenment" target="_blank" rel="noopener">@gratefulenlightenment</a>
+    </p>
+  </div>
+</section>
 
 <!-- STORY -->
 <section class="story" id="story">
