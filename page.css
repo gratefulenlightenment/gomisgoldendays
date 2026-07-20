@@ -39,7 +39,10 @@ main{padding:56px 0 72px;}
 .eyebrow{color:var(--ochre-deep);font-weight:500;letter-spacing:1.5px;text-transform:uppercase;font-size:.72rem;margin-bottom:12px;}
 h1{font-family:'Lora',serif;font-weight:600;font-size:clamp(1.8rem,4vw,2.6rem);line-height:1.2;margin-bottom:10px;}
 h1 em{font-style:italic;color:var(--ochre-deep);}
-.updated{color:var(--charcoal-soft);font-size:.85rem;margin-bottom:36px;font-style:italic;}
+.updated{color:var(--charcoal-soft);font-size:.85rem;margin-bottom:24px;font-style:italic;}
+.post-hero{margin:0 0 34px;}
+.post-hero img{display:block;max-width:100%;width:auto;max-height:520px;margin:0 auto;border-radius:14px;}
+.post-hero figcaption{margin-top:12px;font-size:.9rem;font-style:italic;color:var(--charcoal-soft);line-height:1.6;}
 h2{font-family:'Lora',serif;font-weight:600;font-size:1.35rem;margin:38px 0 12px;}
 h3{font-weight:600;font-size:1.05rem;margin:24px 0 8px;}
 p,ul,ol{margin-bottom:16px;font-size:1rem;color:var(--charcoal-soft);}
