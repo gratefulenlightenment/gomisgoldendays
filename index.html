@@ -37,7 +37,17 @@
   "name": "Gomi's Golden Days — 90-Day Memory & Care Journal",
   "description": "A 90-day memory & care journal for the senior dogs we love — gentle daily prompts to hold onto small moments and quietly notice the changes that matter.",
   "image": "https://gomisgoldendays.com/images/hero-gomi.jpg",
-  "brand": { "@type": "Brand", "name": "Gomi's Golden Days" },
+  "brand": {
+    "@type": "Brand",
+    "name": "Gomi's Golden Days",
+    "url": "https://gomisgoldendays.com/",
+    "sameAs": [
+      "https://www.instagram.com/gomithesuperyorkie/",
+      "https://www.youtube.com/@gomitv536",
+      "https://www.etsy.com/shop/GomisGoldenDays",
+      "https://csteve6.gumroad.com/"
+    ]
+  },
   "offers": {
     "@type": "Offer",
     "price": "12.99",
@@ -324,6 +334,7 @@
     .nav-links{
       display:flex;
       width:100%;
+      max-width:100%;
       gap:18px;
       overflow-x:auto;
       white-space:nowrap;
@@ -338,6 +349,14 @@
     .nav-links a{
       flex:0 0 auto;
       font-size:.78rem;
+    }
+
+    .foot-links{
+      max-width:100%;
+      flex-wrap:wrap;
+      justify-content:center;
+      column-gap:18px;
+      row-gap:10px;
     }
   
     .story-photos{grid-template-columns:1fr 1fr;}
@@ -365,7 +384,7 @@
       <a href="/golden-walk/">Golden Walk</a>
       <a href="#journal">The Journal</a>
       <a href="#favorites">Gomi's Favorites</a>
-      <a href="#signup">Get Notified</a>
+      <a href="#signup" data-cta="lead" data-placement="nav">Free Checklist</a>
     </div>
   </div>
 </nav>
@@ -378,8 +397,11 @@
       <h1>The ordinary days quietly become the <em>golden</em> ones.</h1>
       <p class="lead">A 90-day memory &amp; care journal — made for a Super Yorkie named Gomi, and for every dog whose small moments deserve to be kept.</p>
       <div class="hero-cta">
-        <a href="https://csteve6.gumroad.com/l/senior-dog-golden-days-journal"
+        <a href="https://csteve6.gumroad.com/l/senior-dog-golden-days-journal?utm_source=gomisgoldendays&amp;utm_medium=website&amp;utm_campaign=golden_days_journal&amp;utm_content=hero"
    class="btn btn-primary"
+   data-cta="journal"
+   data-destination="gumroad"
+   data-placement="hero"
    target="_blank"
    rel="noopener">Get the Journal</a>
         <a href="#story" class="btn btn-ghost">Meet Gomi</a>
@@ -465,6 +487,7 @@
 
 <!-- DOG AGE CALCULATOR -->
 <section class="age-calculator" id="age-calculator">
+  <span id="calculator" aria-hidden="true"></span>
   <div class="wrap">
     <div class="head">
       <div class="eyebrow">A Little Golden Fun</div>
@@ -555,8 +578,8 @@
       </ul>
       <p class="note">Print it at home, or use it digitally on your iPad or tablet (GoodNotes, Notability, and similar apps). However you keep it, there's no wrong way to remember a dog you love.</p>
       <div class="hero-cta">
-        <a href="https://csteve6.gumroad.com/l/senior-dog-golden-days-journal" class="btn btn-primary" target="_blank" rel="noopener">Get the Journal — $12.99</a>
-        <a href="https://www.etsy.com/listing/4538387604/senior-dog-golden-days-journal-93-page" class="btn btn-ghost" target="_blank" rel="noopener">Also on Etsy</a>
+        <a href="https://csteve6.gumroad.com/l/senior-dog-golden-days-journal?utm_source=gomisgoldendays&amp;utm_medium=website&amp;utm_campaign=golden_days_journal&amp;utm_content=journal_section" class="btn btn-primary" data-cta="journal" data-destination="gumroad" data-placement="journal_section" target="_blank" rel="noopener">Get the Journal — $12.99</a>
+        <a href="https://www.etsy.com/listing/4538387604/senior-dog-golden-days-journal-93-page?utm_source=gomisgoldendays&amp;utm_medium=website&amp;utm_campaign=golden_days_journal&amp;utm_content=journal_section" class="btn btn-ghost" data-cta="journal" data-destination="etsy" data-placement="journal_section" target="_blank" rel="noopener">Also on Etsy</a>
       </div>
     </div>
   </div>
@@ -667,7 +690,7 @@
       <a href="https://www.instagram.com/gomithesuperyorkie" target="_blank" rel="noopener">Instagram</a>
       <a href="/golden-walk/">Golden Walk</a>
       <a href="/senior-dog-care-guide/">Care Guide</a>
-      <a href="#signup">Newsletter</a>
+      <a href="#signup" data-cta="lead" data-placement="footer">Free Checklist</a>
     </div>
     <div class="foot-links">
       <a href="/about/">About</a>
