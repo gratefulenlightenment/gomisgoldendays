@@ -48,7 +48,7 @@ button { font: inherit; }
 
 .brand-home { color: var(--charcoal); text-decoration: none; white-space: nowrap; }
 .brand-accent { color: var(--ochre-deep); }
-.site-links { display: flex; align-items: center; justify-content: space-between; gap: 18px; padding: 0 0 2px; font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif; font-size: .78rem; font-weight: 500; }
+.site-links { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 10px 18px; padding: 0 0 2px; font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif; font-size: .78rem; font-weight: 500; }
 .site-links a { color: var(--charcoal-soft); text-decoration: none; white-space: nowrap; }
 .site-links a:hover, .site-links a:focus-visible { color: var(--ochre-deep); }
 
