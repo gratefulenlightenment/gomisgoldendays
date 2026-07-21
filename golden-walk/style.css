@@ -36,24 +36,21 @@ button { font: inherit; }
 }
 
 .brand-bar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  min-height: 38px;
-  padding: 0 4px 10px;
+  display: grid;
+  gap: 9px;
+  padding: 0 4px 12px;
   color: var(--charcoal-soft);
   font-family: Georgia, "Times New Roman", serif;
-  font-size: .94rem;
+  font-size: 1.15rem;
+  font-weight: 600;
   letter-spacing: .01em;
 }
 
-.brand-home { display: inline-flex; align-items: center; gap: 9px; color: inherit; text-decoration: none; white-space: nowrap; }
-.game-links { display: flex; align-items: center; gap: 10px; margin-left: auto; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: .66rem; font-weight: 700; }
-.game-links a { padding: 4px 7px; border: 1px solid rgba(58,58,56,.12); border-radius: 999px; color: var(--charcoal-soft); text-decoration: none; white-space: nowrap; }
-.game-links a:hover, .game-links a:focus-visible { border-color: rgba(167,125,43,.42); color: var(--ochre-deep); }
-
-.brand-mark { color: var(--ochre); font-size: 1.05rem; }
+.brand-home { color: var(--charcoal); text-decoration: none; white-space: nowrap; }
+.brand-accent { color: var(--ochre-deep); }
+.site-links { display: flex; align-items: center; justify-content: space-between; gap: 18px; padding: 0 0 2px; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: .78rem; font-weight: 500; }
+.site-links a { color: var(--charcoal-soft); text-decoration: none; white-space: nowrap; }
+.site-links a:hover, .site-links a:focus-visible { color: var(--ochre-deep); }
 
 .prototype-pill {
   margin-left: auto;
@@ -181,7 +178,7 @@ button { font: inherit; }
 
 .gomi-wrap img { position: relative; z-index: 2; display: block; width: 100%; height: auto; filter: drop-shadow(0 6px 7px rgba(49,38,24,.18)); }
 .gomi-shadow { position: absolute; z-index: 1; left: 13%; right: 7%; bottom: 2%; height: 14%; border-radius: 50%; background: rgba(57,47,34,.2); filter: blur(7px); }
-.love-heart { position: absolute; z-index: 4; top: 7%; right: 17%; color: #c45959; font-size: 24px; opacity: 0; pointer-events: none; animation: heartBurst .88s ease-out forwards; }
+.love-heart { position: absolute; z-index: 4; top: 5%; right: 14%; color: #c45959; font-size: 36px; line-height: 1; opacity: 0; pointer-events: none; filter: drop-shadow(0 2px 2px rgba(92,49,42,.18)); animation: heartBurst .88s ease-out forwards; }
 
 .walking { animation: puppyWalk .46s ease-in-out infinite alternate; }
 .walking img { animation: puppyTilt .92s ease-in-out infinite alternate; }
@@ -327,44 +324,39 @@ button { font: inherit; }
   background: transparent;
   box-shadow: none;
 }
-.result-panel .eyebrow { margin-bottom: 9px; }
-.result-panel h2 { font-size: clamp(1.8rem, 7.5vw, 2.35rem); }
+.result-panel .eyebrow { margin-bottom: 10px; font-size: .7rem; line-height: 1.45; }
+.result-panel h2 { font-size: clamp(1.7rem, 6.6vw, 2.05rem); line-height: 1.06; }
 .memory-photo { position: relative; width: 240px; height: 240px; margin: 0 auto 18px; transform: rotate(-2deg); }
 .memory-photo img { display: block; width: 100%; height: 100%; object-fit: cover; border: 5px solid #fff; border-radius: 12px; box-shadow: 0 8px 18px rgba(63,48,28,.16); }
-.memory-photo span { position: absolute; left: 50%; bottom: -7px; translate: -50% 0; width: max-content; padding: 3px 7px; background: #fff; color: #6d6357; font-family: Georgia, "Times New Roman", serif; font-size: .58rem; font-style: italic; box-shadow: 0 3px 8px rgba(63,48,28,.1); }
-.result-count { margin: 10px 0 0; color: var(--charcoal-soft); font-size: .85rem; }
-.result-count strong { color: var(--ochre-deep); font-size: 1.1rem; }
-blockquote { margin: 9px 0 12px; color: #776b5b; font-family: Georgia, "Times New Roman", serif; font-size: .9rem; font-style: italic; line-height: 1.35; }
+.memory-photo span { position: absolute; left: 50%; bottom: -7px; translate: -50% 0; width: max-content; padding: 4px 8px; background: #fff; color: #6d6357; font-family: Georgia, "Times New Roman", serif; font-size: .68rem; font-style: italic; box-shadow: 0 3px 8px rgba(63,48,28,.1); }
+.result-count { margin: 12px 0 0; color: var(--charcoal-soft); font-size: .94rem; line-height: 1.45; }
+.result-count strong { color: var(--ochre-deep); font-size: 1.25rem; }
+blockquote { margin: 10px 0 14px; color: #776b5b; font-family: Georgia, "Times New Roman", serif; font-size: 1.02rem; font-style: italic; line-height: 1.42; }
 .result-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
-.result-actions .primary-button, .result-actions .secondary-button { min-height: 44px; padding: 0 13px; font-size: .78rem; }
-.share-note { min-height: 1em; margin: 7px 0 0; color: var(--sage-deep); font-size: .68rem; }
-
-.page-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 8px 18px; margin: 12px auto 0; text-align: center; font-size: .7rem; }
-.page-links a { color: #7b756a; text-underline-offset: 3px; }
+.result-actions .primary-button, .result-actions .secondary-button { min-height: 44px; padding: 0 13px; font-size: .82rem; }
+.share-note { min-height: 1em; margin: 8px 0 0; color: var(--sage-deep); font-size: .76rem; }
 
 @media (max-height: 710px) {
   .game-card { min-height: calc(100svh - 72px); height: calc(100svh - 72px); border-radius: 22px; }
-  .brand-bar { min-height: 30px; padding-bottom: 6px; }
+  .brand-bar { gap: 6px; padding-bottom: 8px; }
   .screen-panel { padding: 21px 22px 18px; }
   .screen-panel > p:not(.how-to):not(.result-count):not(.share-note) { margin: 12px auto 15px; }
   .end-screen { padding: 8px 18px; }
   .result-panel { padding: 4px 6px 2px; }
-  .result-panel .eyebrow { margin-bottom: 6px; font-size: .56rem; }
-  .result-panel h2 { font-size: clamp(1.55rem, 7vw, 1.9rem); }
+  .result-panel .eyebrow { margin-bottom: 6px; font-size: .65rem; }
+  .result-panel h2 { font-size: clamp(1.55rem, 6.2vw, 1.78rem); }
   .memory-photo { width: 180px; height: 180px; margin-bottom: 13px; }
   .result-count { margin-top: 7px; }
-  blockquote { margin: 6px 0 9px; font-size: .82rem; }
+  blockquote { margin: 7px 0 10px; font-size: .94rem; }
   .result-actions .primary-button, .result-actions .secondary-button { min-height: 40px; }
   .share-note { margin-top: 5px; }
   .primary-button, .secondary-button { min-height: 45px; }
   .gomi-wrap { width: clamp(145px, 42%, 190px); }
-  .page-links { display: none; }
 }
 
 @media (max-width: 420px) {
-  .brand-bar { gap: 7px; font-size: .82rem; }
-  .game-links { gap: 5px; }
-  .game-links a { padding: 4px 6px; font-size: .59rem; }
+  .brand-bar { font-size: 1.08rem; }
+  .site-links { gap: 14px; font-size: .74rem; }
 }
 
 @media (min-width: 650px) {

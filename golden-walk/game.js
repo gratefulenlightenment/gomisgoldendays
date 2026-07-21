@@ -155,7 +155,9 @@
       fast: [3, 3.63]
     };
     const duration = randomBetween(...ranges[speed]);
-    return params.has("qa") ? duration * 3 : duration;
+    const mobileSpeedFactor = window.matchMedia("(max-width: 640px)").matches ? 1 / 1.1 : 1;
+    const adjustedDuration = duration * mobileSpeedFactor;
+    return params.has("qa") ? adjustedDuration * 3 : adjustedDuration;
   }
 
   function celebrate(button) {
