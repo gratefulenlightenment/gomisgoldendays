@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f8f1e5">
+  <meta name="description" content="Pop golden balloons with little Gomi in a fast 45-second memory game from Gomi's Golden Days.">
+  <link rel="canonical" href="https://gomisgoldendays.com/golden-walk/">
+  <meta property="og:title" content="Gomi's Golden Walk | Gomi's Golden Days">
+  <meta property="og:description" content="A fast 45-second golden balloon game with little Gomi.">
+  <meta property="og:url" content="https://gomisgoldendays.com/golden-walk/">
+  <meta property="og:type" content="website">
+  <title>Gomi's Golden Walk | Gomi's Golden Days</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page-shell">
+    <header class="brand-bar">
+      <a class="brand-home" href="/" aria-label="Gomi's Golden Days home">
+        <span class="brand-mark" aria-hidden="true">✦</span>
+        <span>Gomi's Golden Days</span>
+      </a>
+      <nav class="game-links" aria-label="More from Gomi">
+        <a href="/dog-age-calculator/">Dog Age</a>
+        <a href="/senior-dog-care-guide/">Care Guide</a>
+      </nav>
+    </header>
+
+    <section class="game-card" id="game-card" aria-label="Gomi's Golden Walk game">
+      <div class="game-hud" aria-label="Game status">
+        <div class="hud-item">
+          <span class="hud-label">TIME</span>
+          <strong id="time-display">45</strong>
+        </div>
+        <div class="hud-title">Gomi's Golden Walk</div>
+        <div class="hud-item hud-score">
+          <span class="hud-label">MOMENTS</span>
+          <strong id="score-display">0</strong>
+        </div>
+      </div>
+      <div class="time-track" aria-hidden="true"><span id="time-progress"></span></div>
+
+      <div class="game-world" id="game-world">
+        <div class="sun-glow" aria-hidden="true"></div>
+        <div class="cloud cloud-one" aria-hidden="true"></div>
+        <div class="cloud cloud-two" aria-hidden="true"></div>
+        <div class="far-hill" aria-hidden="true"></div>
+        <div class="near-hill" aria-hidden="true"></div>
+        <div class="golden-path" aria-hidden="true"></div>
+        <div class="ground-details" aria-hidden="true"></div>
+
+        <div class="moment-layer" id="moment-layer" aria-live="polite"></div>
+
+        <div class="gomi-wrap" id="gomi-wrap" aria-label="Little Gomi walking">
+          <div class="gomi-shadow" aria-hidden="true"></div>
+          <img src="assets/baby-gomi.webp" alt="An illustrated baby Gomi, a tiny Yorkshire terrier puppy">
+        </div>
+
+        <div class="screen start-screen" id="start-screen">
+          <div class="screen-panel">
+            <div class="eyebrow">GOMI · DAY THREE</div>
+            <h1>A golden day<br>is waiting.</h1>
+            <p>This is little Gomi, three days after she came home. Take her for the walk those days were always waiting for.</p>
+            <button class="primary-button" id="start-button" type="button">
+              <span>Take a Walk</span><span aria-hidden="true">→</span>
+            </button>
+            <p class="how-to"><span aria-hidden="true">☝</span> Pop the golden balloons before they float away.</p>
+          </div>
+        </div>
+
+        <div class="screen end-screen" id="end-screen" hidden>
+          <div class="screen-panel result-panel">
+            <div class="memory-photo">
+              <img src="assets/gomi-day-three.jpg" alt="The real baby Gomi, three days after arriving home">
+              <span>Gomi · three days home</span>
+            </div>
+            <div class="eyebrow">A REAL MOMENT FROM GOMI'S EARLY DAYS</div>
+            <h2>Today, you gave<br>little Gomi a golden day.</h2>
+            <p class="result-count">You popped <strong id="final-score">0</strong> golden moments together.</p>
+            <blockquote>Some golden moments arrive late.<br>They still count.</blockquote>
+            <div class="result-actions">
+              <button class="primary-button" id="replay-button" type="button">Walk Again</button>
+              <button class="secondary-button" id="share-button" type="button">Share the Moment</button>
+            </div>
+            <p class="share-note" id="share-note" aria-live="polite"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <nav class="page-links" aria-label="Gomi's Golden Days pages">
+      <a href="/">Home</a>
+      <a href="/dog-age-calculator/">Dog Age Calculator</a>
+      <a href="/senior-dog-care-guide/">Senior Dog Care Guide</a>
+    </nav>
+  </main>
+
+  <script src="game.js"></script>
+</body>
+</html>
