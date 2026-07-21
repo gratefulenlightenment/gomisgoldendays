@@ -98,16 +98,41 @@ Google은 Request Indexing의 정확한 일일 한도와 리셋 시각을 공개
 
 Search Console 클릭은 Steve의 Google 계정 권한이 필요한 사용자 작업임. 인증된 브라우저가 연결되어 있고 Steve가 해당 작업을 명시적으로 승인한 경우에만 Codex가 대신 수행한다.
 
+## Pinterest 인계 — 2026-07-21
+
+계정 및 노출 차단 여부 점검 완료:
+
+- 비즈니스 계정이며 Business type은 `Content creator`, 목표는 `Drive traffic to your site`
+- `gomisgoldendays.com` 도메인 Claim 완료
+- Instagram `@gomithesuperyorkie` 연결 및 자동 게시 활성화
+- 프로필 비공개와 Search privacy 모두 꺼져 있음
+- 공개 보드 3개, 공개 핀 9개, 예약 핀 1개 확인
+- 기존 핀 대부분이 생성 후 10~21시간 이내이며 Pinterest 화면도 최초 48시간 통계를 실시간 추정치로 안내
+- 표본 핀의 제목, 설명, HTTPS 목적지와 Pinterest UTM은 정상
+
+따라서 노출 0의 주원인은 기술적 차단보다 신규 계정, 매우 짧은 경과 시간, 적은 핀 수로 판단한다. 성과를 보기 전에 같은 핀을 삭제하거나 반복 재게시하지 않는다.
+
+1차 SEO 개선 완료:
+
+- `Dog Age & Life Stages` 보드에 dog age, dog years, life stages, senior dog 키워드 설명 추가
+- `Senior Dog Care` 보드에 mobility, routines, comfort, enrichment 키워드 설명 추가
+- Instagram 자동 게시 보드 `Social`을 `Gomi the Yorkie | Golden Moments`로 변경하고 Yorkie 및 senior dog 설명 추가
+- 2026-07-22 12:00에 `Dog Age & Life Stages` 보드용 핀 1개 예약 상태 확인
+
+다음 Pinterest 작업은 새 핀의 노출 추이를 모니터링하면서 관련 보드별 원본 핀 재고를 늘리는 것이다.
+
+Steve는 직접 작업량 최소화를 최우선으로 두므로 Instagram 자동 게시는 유지한다. 자동 게시물이 Pinterest 전용으로 완벽하게 최적화되지 않더라도 꾸준히 발행되는 편이 수동 작업을 요구해 발행이 중단되는 것보다 낫다. Pinterest 전용 원본 핀은 Codex가 처리할 수 있을 때 추가하는 보완 작업이며 Steve의 필수 반복 업무로 만들지 않는다.
+
 ## 현재 작업 우선순위 기준선
 
 큰 항목을 보류, 삭제 또는 순서 변경하기 전에 Steve에게 결정받는다.
 
 ### P0 — 실제 유입 병목
 
-1. Pinterest 노출 0 원인 진단 및 개선
-   - 비즈니스 계정 여부와 도메인 Claim 상태
-   - 핀과 보드의 공개 상태
-   - 제목, 설명, 키워드, 목적지, 초기 발행량
+1. Pinterest 구조 진단 및 1차 SEO 개선 완료
+   - 신규 핀의 48시간 및 7일 노출 추이 모니터링
+   - 관련 보드별 원본 2:3 핀 재고 확대
+   - Instagram 자동 게시 유지 — Steve의 수동 작업을 요구하지 않음
 2. Search Console 최소 후속 조치 완료 — Golden Walk 색인 상태만 추후 모니터링
 3. 외부 채널 배관 검증
    - Instagram 3개 링크
