@@ -2,9 +2,9 @@
   --cream: #fbf7f0;
   --cream-deep: #f3ebdd;
   --paper: rgba(255, 252, 246, .94);
-  --ochre: #c9a24b;
-  --ochre-deep: #a77d2b;
-  --sage: #9bab90;
+  --ochre: #C9A24B;
+  --ochre-deep: #B08A3A;
+  --sage: #A8B79E;
   --sage-deep: #718064;
   --rose: #d8b4a6;
   --charcoal: #3a3a38;
@@ -22,7 +22,7 @@ body {
     radial-gradient(circle at 18% 8%, rgba(201, 162, 75, .12), transparent 28rem),
     var(--cream);
   color: var(--charcoal);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
   -webkit-font-smoothing: antialiased;
   overscroll-behavior: none;
 }
@@ -40,7 +40,7 @@ button { font: inherit; }
   gap: 9px;
   padding: 0 4px 12px;
   color: var(--charcoal-soft);
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: 'Lora', Georgia, serif;
   font-size: 1.15rem;
   font-weight: 600;
   letter-spacing: .01em;
@@ -48,7 +48,7 @@ button { font: inherit; }
 
 .brand-home { color: var(--charcoal); text-decoration: none; white-space: nowrap; }
 .brand-accent { color: var(--ochre-deep); }
-.site-links { display: flex; align-items: center; justify-content: space-between; gap: 18px; padding: 0 0 2px; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: .78rem; font-weight: 500; }
+.site-links { display: flex; align-items: center; justify-content: space-between; gap: 18px; padding: 0 0 2px; font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif; font-size: .78rem; font-weight: 500; }
 .site-links a { color: var(--charcoal-soft); text-decoration: none; white-space: nowrap; }
 .site-links a:hover, .site-links a:focus-visible { color: var(--ochre-deep); }
 
@@ -57,7 +57,7 @@ button { font: inherit; }
   padding: 4px 8px;
   border: 1px solid rgba(58, 58, 56, .12);
   border-radius: 999px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: .63rem;
   font-weight: 700;
   letter-spacing: .09em;
@@ -93,7 +93,7 @@ button { font: inherit; }
 .hud-score { text-align: right; }
 .hud-label { font-size: .58rem; font-weight: 750; letter-spacing: .13em; color: var(--charcoal-soft); }
 .hud-item strong { margin-top: 6px; font-size: 1.15rem; font-variant-numeric: tabular-nums; }
-.hud-title { text-align: center; font-family: Georgia, "Times New Roman", serif; font-size: 1rem; font-weight: 600; }
+.hud-title { text-align: center; font-family: 'Lora', Georgia, serif; font-size: 1rem; font-weight: 600; }
 
 .time-track { position: absolute; z-index: 35; top: 63px; left: 0; right: 0; height: 3px; background: rgba(58,58,56,.07); }
 .time-track span { display: block; width: 100%; height: 100%; background: linear-gradient(90deg, var(--ochre), #e2bd66); transform-origin: left; }
@@ -289,10 +289,10 @@ button { font: inherit; }
 }
 
 .eyebrow { margin-bottom: 12px; color: var(--ochre-deep); font-size: .63rem; font-weight: 800; letter-spacing: .14em; }
-.screen h1, .screen h2 { margin: 0; font-family: Georgia, "Times New Roman", serif; font-weight: 500; line-height: 1.03; letter-spacing: -.025em; }
+.screen h1, .screen h2 { margin: 0; font-family: 'Lora', Georgia, serif; font-weight: 500; line-height: 1.03; letter-spacing: -.025em; }
 .screen h1 { font-size: clamp(2.35rem, 11vw, 3.25rem); }
 .screen h2 { font-size: clamp(1.85rem, 8vw, 2.55rem); }
-.screen-panel > p:not(.how-to):not(.result-count):not(.share-note) { margin: 18px auto 21px; max-width: 30ch; color: var(--charcoal-soft); font-family: Georgia, "Times New Roman", serif; font-size: .97rem; line-height: 1.55; }
+.screen-panel > p:not(.how-to):not(.result-count):not(.share-note) { margin: 18px auto 21px; max-width: 30ch; color: var(--charcoal-soft); font-family: 'Lora', Georgia, serif; font-size: .97rem; line-height: 1.55; }
 
 .primary-button, .secondary-button {
   display: inline-flex;
@@ -328,10 +328,10 @@ button { font: inherit; }
 .result-panel h2 { font-size: clamp(1.7rem, 6.6vw, 2.05rem); line-height: 1.06; }
 .memory-photo { position: relative; width: 240px; height: 240px; margin: 0 auto 18px; transform: rotate(-2deg); }
 .memory-photo img { display: block; width: 100%; height: 100%; object-fit: cover; border: 5px solid #fff; border-radius: 12px; box-shadow: 0 8px 18px rgba(63,48,28,.16); }
-.memory-photo span { position: absolute; left: 50%; bottom: -7px; translate: -50% 0; width: max-content; padding: 4px 8px; background: #fff; color: #6d6357; font-family: Georgia, "Times New Roman", serif; font-size: .68rem; font-style: italic; box-shadow: 0 3px 8px rgba(63,48,28,.1); }
+.memory-photo span { position: absolute; left: 50%; bottom: -7px; translate: -50% 0; width: max-content; padding: 4px 8px; background: #fff; color: #6d6357; font-family: 'Lora', Georgia, serif; font-size: .68rem; font-style: italic; box-shadow: 0 3px 8px rgba(63,48,28,.1); }
 .result-count { margin: 12px 0 0; color: var(--charcoal-soft); font-size: .94rem; line-height: 1.45; }
 .result-count strong { color: var(--ochre-deep); font-size: 1.25rem; }
-blockquote { margin: 10px 0 14px; color: #776b5b; font-family: Georgia, "Times New Roman", serif; font-size: 1.02rem; font-style: italic; line-height: 1.42; }
+blockquote { margin: 10px 0 14px; color: #776b5b; font-family: 'Lora', Georgia, serif; font-size: 1.02rem; font-style: italic; line-height: 1.42; }
 .result-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
 .result-actions .primary-button, .result-actions .secondary-button { min-height: 44px; padding: 0 13px; font-size: .82rem; }
 .share-note { min-height: 1em; margin: 8px 0 0; color: var(--sage-deep); font-size: .76rem; }
@@ -365,4 +365,35 @@ blockquote { margin: 10px 0 14px; color: #776b5b; font-family: Georgia, "Times N
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; }
+}
+
+/* Shared site footer — matches gomisgoldendays.com content pages */
+.site-footer {
+  margin-top: 26px;
+  padding: 38px 20px 34px;
+  border-top: 1px solid rgba(58,58,56,.14);
+  background: var(--cream-deep);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 15px;
+}
+.site-footer .foot-brand { font-family: 'Lora', Georgia, serif; font-weight: 600; }
+.site-footer .foot-brand span { color: var(--ochre-deep); }
+.site-footer .foot-links { display: flex; gap: 18px; flex-wrap: wrap; justify-content: center; font-size: .9rem; }
+.site-footer .foot-links a { color: var(--charcoal-soft); text-decoration: none; }
+.site-footer .foot-links a:hover, .site-footer .foot-links a:focus-visible { color: var(--ochre-deep); }
+.site-footer .foot-legal { font-size: .78rem; color: var(--charcoal-soft); line-height: 1.6; }
+
+/* End-screen funnel CTA */
+.keep-going { margin: 12px 0 0; display: grid; gap: 5px; }
+.keep-signup { color: var(--ochre-deep); font-weight: 600; font-size: .82rem; text-decoration: none; }
+.keep-signup:hover, .keep-signup:focus-visible { text-decoration: underline; }
+.keep-journal { color: var(--charcoal-soft); font-size: .72rem; text-decoration: underline; text-underline-offset: 2px; }
+.keep-journal:hover, .keep-journal:focus-visible { color: var(--ochre-deep); }
+@media (max-height: 710px) {
+  .keep-going { margin-top: 8px; gap: 3px; }
+  .keep-signup { font-size: .78rem; }
+  .keep-journal { font-size: .68rem; }
 }
