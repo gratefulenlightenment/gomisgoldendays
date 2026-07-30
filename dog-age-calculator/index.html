@@ -149,20 +149,16 @@
 
     .next-step{text-align:center;}
     .next-step p{max-width:610px;margin:0 auto 26px;color:var(--charcoal-soft);}
-    .calc-signup{width:min(100%,740px);margin:0 auto 34px;}
-    /* beehiiv embed: reserve the measured height per container width so the iframe never shifts the page */
-    .bh-embed{container-type:inline-size;}
-    .bh-embed iframe{display:block;width:100%;height:393px;border:0;}
-    @container (max-width:591px){.bh-embed iframe{height:418px;}}
-    @container (max-width:519px){.bh-embed iframe{height:456px;}}
-    @container (max-width:483px){.bh-embed iframe{height:480px;}}
-    @container (max-width:379px){.bh-embed iframe{height:543px;}}
-    @container (max-width:358px){.bh-embed iframe{height:567px;}}
-    @container (max-width:343px){.bh-embed iframe{height:643px;}}
-    @container (max-width:329px){.bh-embed iframe{height:691px;}}
-    @container (max-width:279px){.bh-embed iframe{height:753px;}}
-    @container (max-width:263px){.bh-embed iframe{height:900px;}}
     .cta-row{display:flex;justify-content:center;flex-wrap:wrap;gap:14px;}
+    .cta-row .btn{flex:1 1 0;max-width:300px;min-height:56px;color:var(--charcoal);box-shadow:none;}
+    .btn-ochre{background:rgba(201,162,75,.18);}
+    .btn-sage{background:rgba(168,183,158,.32);}
+    .btn-rose{background:rgba(216,180,166,.32);}
+    .btn-ochre:hover{background:rgba(201,162,75,.28);}
+    .btn-sage:hover{background:rgba(168,183,158,.42);}
+    .btn-rose:hover{background:rgba(216,180,166,.42);}
+    .cta-row .btn:hover{transform:translateY(-1px);}
+    .cta-row .btn:focus-visible{outline:3px solid rgba(58,58,56,.38);outline-offset:3px;}
     .gomi-link{display:grid;grid-template-columns:140px 1fr;gap:26px;align-items:center;max-width:720px;margin:42px auto 0;text-align:left;background:var(--cream-deep);border:1px solid var(--line);border-radius:10px;padding:18px;}
     .gomi-link img{width:140px;height:140px;object-fit:cover;border-radius:7px;}
     .gomi-link h3{margin-bottom:8px;}
@@ -190,9 +186,9 @@
       .nav-links{display:flex;width:100%;gap:18px;overflow-x:auto;white-space:nowrap;padding-bottom:4px;scrollbar-width:none;}
       .nav-links::-webkit-scrollbar{display:none;}.nav-links a{flex:0 0 auto;font-size:.78rem;}
       .hero{padding:54px 0 26px;}.hero h1{font-size:2.1rem;}
+      .cta-row{flex-direction:column;align-items:stretch;}.cta-row .btn{width:100%;max-width:none;}
       .gomi-link{grid-template-columns:1fr;text-align:center;}.gomi-link img{margin:0 auto;}
     }
-    @media(max-width:500px){.calc-signup{width:calc(100% + 32px);margin-left:-16px;margin-right:-16px;}}
   </style>
 </head>
 <body>
@@ -269,7 +265,6 @@
         <h2 class="section-title">Dog years are not a simple multiplication.</h2>
         <p>Dogs mature much faster than people during their first two years. After that, the pace varies with adult size: larger dogs generally move through later life stages sooner than smaller dogs.</p>
         <p>This calculator uses your dog’s exact age in years and months, then estimates a human-equivalent age from a size-based physiological age chart. It is a helpful way to think about life stage—not a diagnosis or a prediction of lifespan.</p>
-        <p>Curious why size makes such a difference? Read <a href="/do-big-dogs-age-faster/">do big dogs age faster?</a> for a size-by-size comparison and the science behind it. New to senior dog care? Start with our <a href="/senior-dog-care-guide/">complete senior dog care guide</a>.</p>
         <div class="life-stages">
           <article class="stage-card"><h3>Growing</h3><p>The earliest months bring rapid physical and behavioral development.</p></article>
           <article class="stage-card"><h3>Adult</h3><p>Adult years vary by dog, with size becoming more meaningful over time.</p></article>
@@ -282,14 +277,11 @@
       <div class="wrap">
         <div class="eyebrow">Notice the golden days</div>
         <h2 class="section-title">A number is only the beginning.</h2>
-        <p>As dogs grow older, tiny shifts in energy, appetite, sleep, movement, and mood can matter. Enter your email below and I'll send Gomi's free one-page <strong>Tiny Changes Checklist</strong> — a gentle way to notice what matters in your senior dog's days.</p>
-        <div class="calc-signup bh-embed">
-          <iframe src="https://subscribe-forms.beehiiv.com/v3/forms/87abb1d8-d4d3-4509-8e1f-c15961619edb?referrer=https%253A%252F%252Fgomisgoldendays.com%252Fdog-age-calculator%252F" title="Subscribe to Gomi's Golden Days" scrolling="no" loading="lazy"></iframe>
-        </div>
-        <script type="text/javascript" async src="https://subscribe-forms.beehiiv.com/attribution.js"></script>
+        <p>As dogs grow older, tiny shifts in energy, appetite, sleep, movement, and mood can matter.</p>
         <div class="cta-row">
-          <a class="btn btn-secondary" href="/#journal">Explore the Golden Days Journal</a>
-          <a class="btn btn-primary" href="/golden-walk/">Play Gomi's Golden Walk</a>
+          <a class="btn btn-ochre" href="/do-big-dogs-age-faster/">Why Big Dogs Age Faster</a>
+          <a class="btn btn-sage" href="/senior-dog-care-guide/">Complete Senior Dog Care Guide</a>
+          <a class="btn btn-rose" href="/golden-walk/">Play Gomi's Golden Walk</a>
         </div>
         <article class="gomi-link">
           <img src="/images/hero-gomi.jpg" alt="Gomi the Super Yorkie smiling outdoors" width="952" height="1288" loading="lazy">
