@@ -234,15 +234,9 @@
     background:var(--cream-deep);border:1px solid var(--line);border-radius:8px;overflow:hidden;
     transition:transform .2s, box-shadow .2s;text-decoration:none;color:inherit;display:flex;flex-direction:column;
   }
+  .fav-card:hover{transform:translateY(-4px);box-shadow:0 20px 40px -24px rgba(58,58,56,.5);}
   .fav-card img{width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;}
   .fav-card .body{padding:20px;display:flex;flex-direction:column;flex:1;position:relative;}
-  .fav-card .body-only{justify-content:center;background:
-    radial-gradient(circle at 30% 20%, rgba(201,162,75,.1), transparent 60%),var(--cream-deep);
-    min-height:180px;}
-  .fav-icon{font-size:2.2rem;margin-bottom:12px;line-height:1;}
-  .fav-card .pill{position:absolute;top:16px;right:16px;background:var(--ochre);color:#fff;
-    font-size:.65rem;letter-spacing:.08em;text-transform:uppercase;font-weight:600;
-    padding:3px 10px;border-radius:100px;}
   .fav-card h3{font-size:1.1rem;margin-bottom:8px;}
   .fav-card p{font-size:.9rem;color:var(--charcoal-soft);margin-bottom:14px;flex:1;}
   .fav-card .shop{font-size:.85rem;font-weight:500;color:var(--ochre-deep);}
@@ -606,27 +600,18 @@
     <p style="color:var(--charcoal-soft);">A few of the everyday comforts that make Gomi's golden days a little cozier.</p>
   </div>
   <div class="fav-grid">
-    <div class="fav-card">
+    <a class="fav-card" href="https://www.amazon.com/dp/B08CXGYW1Q?tag=gomithesupery-20" target="_blank" rel="noopener sponsored">
       <picture>
-        <source srcset="images/fav-pet-bed.webp" type="image/webp">
-        <img src="images/fav-pet-bed.jpg" alt="Gomi napping in her cozy pet bed" width="800" height="1082" loading="lazy">
+        <source srcset="images/fav-pet-bed.webp?v=20260801" type="image/webp">
+        <img src="images/fav-pet-bed.jpg?v=20260801" alt="Gomi napping in her cozy pet bed" width="1200" height="1200" loading="lazy">
       </picture>
       <div class="body">
         <h3>Cozy Pet Bed</h3>
         <p>A comfortable pet bed for your furry friend. Perfect for cats and small to medium dogs. They'll love it!</p>
-        <span class="shop">One of Gomi's picks</span>
+        <span class="shop">Shop on Amazon →</span>
       </div>
-    </div>
-    <div class="fav-card">
-      <div class="body body-only">
-        <div class="fav-icon"><span aria-hidden="true">🦴</span></div>
-        <span class="pill">New</span>
-        <h3>Freeze-Dried Food &amp; Treats</h3>
-        <p>New! Freeze-dried dog food and treats that your pooch will love!</p>
-        <span class="shop">One of Gomi's picks</span>
-      </div>
-    </div>
-    <div class="fav-card">
+    </a>
+    <a class="fav-card" href="https://www.amazon.com/dp/B0748NVWF9?tag=gomithesupery-20" target="_blank" rel="noopener sponsored">
       <picture>
         <source srcset="images/fav-leash.webp" type="image/webp">
         <img src="images/fav-leash.jpg" alt="Gomi on her walk with leash" width="800" height="956" loading="lazy">
@@ -634,10 +619,10 @@
       <div class="body">
         <h3>Tangle-Free Dog Leash</h3>
         <p>This dog leash is a lifesaver for walks. Smooth, tangle-free, and easy to control.</p>
-        <span class="shop">One of Gomi's picks</span>
+        <span class="shop">Shop on Amazon →</span>
       </div>
-    </div>
-    <div class="fav-card">
+    </a>
+    <a class="fav-card" href="https://www.amazon.com/dp/B0CHBK1TY7?tag=gomithesupery-20" target="_blank" rel="noopener sponsored">
       <picture>
         <source srcset="images/fav-toys.webp" type="image/webp">
         <img src="images/fav-toys.jpg" alt="Gomi ready to play" width="800" height="1082" loading="lazy">
@@ -645,21 +630,21 @@
       <div class="body">
         <h3>Durable Dog Toys</h3>
         <p>These durable dog toys are perfect for small and medium dogs. Great for teething!</p>
-        <span class="shop">One of Gomi's picks</span>
+        <span class="shop">Shop on Amazon →</span>
       </div>
-    </div>
-    <div class="fav-card">
+    </a>
+    <a class="fav-card" href="https://www.amazon.com/dp/B07L79SPTN?tag=gomithesupery-20" target="_blank" rel="noopener sponsored">
       <picture>
-        <source srcset="images/fav-flying-ring.webp" type="image/webp">
-        <img src="images/fav-flying-ring.jpg" alt="Gomi playing outdoors" width="600" height="681" loading="lazy">
+        <source srcset="images/fav-flying-ring.webp?v=20260801" type="image/webp">
+        <img src="images/fav-flying-ring.jpg?v=20260801" alt="Gomi lying in the grass beside her orange flying ring" width="800" height="800" loading="lazy">
       </picture>
       <div class="body">
         <h3>Flying Ring</h3>
         <p>This flying ring is perfect for playing with your furry friend!</p>
-        <span class="shop">One of Gomi's picks</span>
+        <span class="shop">Shop on Amazon →</span>
       </div>
-    </div>
-    <div class="fav-card">
+    </a>
+    <a class="fav-card" href="https://www.amazon.com/dp/B0CH8XFNZJ?tag=gomithesupery-20" target="_blank" rel="noopener sponsored">
       <picture>
         <source srcset="images/fav-eye-wash.webp" type="image/webp">
         <img src="images/fav-eye-wash.jpg" alt="Close-up of Gomi's eyes" width="800" height="1006" loading="lazy">
@@ -667,19 +652,22 @@
       <div class="body">
         <h3>Gentle Eye Wash</h3>
         <p>This eye wash soothes and cleans my pup's eyes perfectly. A must-have!</p>
-        <span class="shop">One of Gomi's picks</span>
+        <span class="shop">Shop on Amazon →</span>
       </div>
-    </div>
-    <div class="fav-card">
-      <div class="body body-only">
-        <div class="fav-icon"><span aria-hidden="true">👁️</span></div>
+    </a>
+    <a class="fav-card" href="https://www.amazon.com/dp/B07H2NLCX5?tag=gomithesupery-20" target="_blank" rel="noopener sponsored">
+      <picture>
+        <source srcset="images/fav-eye-lube.webp?v=20260801" type="image/webp">
+        <img src="images/fav-eye-lube.jpg?v=20260801" alt="Gomi looking up while wearing a white sweater" width="665" height="665" loading="lazy">
+      </picture>
+      <div class="body">
         <h3>Soothing Eye Lube</h3>
         <p>My fur babies' eye health is a priority, and this eye lube makes it so easy to keep their eyes moist!</p>
-        <span class="shop">One of Gomi's picks</span>
+        <span class="shop">Shop on Amazon →</span>
       </div>
-    </div>
+    </a>
   </div>
-  <p class="disclosure">These are simply the everyday things Gomi uses and loves.</p>
+  <p class="disclosure">As an Amazon Associate, I earn from qualifying purchases.</p>
 </section>
 
 <!-- EMAIL SIGNUP -->
