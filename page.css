@@ -63,10 +63,13 @@ strong{color:var(--charcoal);font-weight:500;}
 .topic-directory-links a:hover strong{color:var(--ochre-deep);}
 .btn{display:inline-block;background:var(--ochre);color:#fff;padding:12px 26px;border-radius:999px;text-decoration:none;font-weight:500;margin-top:8px;}
 .btn:hover{background:var(--ochre-deep);color:#fff;}
-.story-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px;}
-.story-actions .btn{flex:1 1 210px;margin-top:0;text-align:center;}
-.story-actions .btn-secondary{background:transparent;color:var(--ochre-deep);border:1px solid var(--ochre);}
-.story-actions .btn-secondary:hover{background:var(--cream-deep);color:var(--ochre-deep);}
+.story-actions{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:8px;}
+.story-actions .btn{margin-top:0;padding:12px 10px;text-align:center;white-space:nowrap;font-size:.84rem;}
+.story-actions .btn-sage{background:var(--sage);}
+.story-actions .btn-sage:hover{background:#8FA184;}
+.story-actions .btn-rose{background:var(--rose);}
+.story-actions .btn-rose:hover{background:#C79C8C;}
+@media(max-width:700px){.story-actions{grid-template-columns:1fr;}.story-actions .btn{font-size:1rem;}}
 
 /* CHECKLIST */
 .checklist{list-style:none;padding-left:0;margin:20px 0;}
