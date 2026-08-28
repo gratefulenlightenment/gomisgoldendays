@@ -397,3 +397,54 @@ blockquote { margin: 10px 0 14px; color: #776b5b; font-family: 'Lora', Georgia, 
   .keep-signup { font-size: .78rem; }
   .keep-journal { font-size: .68rem; }
 }
+
+/* Narrative note below the game — page quality, not indexed */
+.story-note {
+  max-width: 640px;
+  margin: 30px auto 0;
+  padding: 30px 24px 32px;
+  border-top: 1px solid rgba(58,58,56,.14);
+  color: var(--charcoal-soft);
+  font-size: .95rem;
+  line-height: 1.75;
+}
+.story-note-eyebrow {
+  margin: 0 0 8px;
+  font-size: .72rem;
+  font-weight: 600;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--ochre-deep);
+}
+.story-note h2 {
+  margin: 0 0 18px;
+  font-family: 'Lora', Georgia, serif;
+  font-size: clamp(1.35rem, 4.2vw, 1.7rem);
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--charcoal);
+}
+.story-note p { margin: 0 0 16px; }
+.story-note-aside {
+  margin: 26px 0 0;
+  padding-top: 20px;
+  border-top: 1px solid rgba(58,58,56,.12);
+  font-size: .88rem;
+  color: var(--charcoal-soft);
+}
+.story-note-links {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  margin-top: 12px;
+}
+.story-note-links a {
+  color: var(--ochre-deep);
+  font-weight: 600;
+  font-size: .88rem;
+  text-decoration: none;
+}
+.story-note-links a:hover, .story-note-links a:focus-visible { text-decoration: underline; }
+@media (min-width: 650px) {
+  .story-note { padding: 38px 32px 40px; }
+}
