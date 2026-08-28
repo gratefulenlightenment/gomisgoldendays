@@ -228,6 +228,27 @@ button { font: inherit; }
 .golden-balloon.popped { pointer-events: none; animation: balloonPop .4s cubic-bezier(.2,.8,.2,1) forwards; }
 .moment-name { position: absolute; top: 87px; left: 50%; translate: -50% 0; white-space: nowrap; padding: 4px 8px; border-radius: 99px; background: rgba(255,253,249,.9); color: #65593f; font-size: .61rem; font-weight: 700; letter-spacing: .04em; opacity: 0; transition: opacity .2s; }
 .golden-balloon:focus .moment-name, .golden-balloon:hover .moment-name { opacity: 1; }
+.moment-message {
+  position: absolute;
+  z-index: 22;
+  translate: -50% -50%;
+  padding: 7px 11px;
+  border: 1px solid rgba(170,138,53,.24);
+  border-radius: 99px;
+  background: rgba(255,253,249,.96);
+  box-shadow: 0 6px 16px rgba(84,64,30,.18);
+  color: #51472f;
+  font-size: clamp(.72rem, 2.5vw, .84rem);
+  font-weight: 700;
+  letter-spacing: .02em;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateY(8px) scale(.94);
+  pointer-events: none;
+  transition: opacity .2s ease, transform .35s ease;
+}
+.moment-message.visible { opacity: 1; transform: translateY(-8px) scale(1); }
+.moment-message.leaving { opacity: 0; transform: translateY(-28px) scale(.98); }
 
 @keyframes balloonRise {
   0% { transform: translate3d(0, 0, 0) rotate(-2deg); }
@@ -365,6 +386,7 @@ blockquote { margin: 10px 0 14px; color: #776b5b; font-family: 'Lora', Georgia, 
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; }
+  .moment-message { transition-duration: .01ms; }
 }
 
 /* Shared site footer — matches gomisgoldendays.com content pages */

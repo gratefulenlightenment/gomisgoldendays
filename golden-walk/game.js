@@ -166,6 +166,16 @@
     const originX = buttonRect.left - layerRect.left + buttonRect.width / 2;
     const originY = buttonRect.top - layerRect.top + buttonRect.height / 2;
 
+    const message = document.createElement("span");
+    message.className = "moment-message";
+    message.textContent = button.dataset.name;
+    message.style.left = `${Math.min(layerRect.width - 84, Math.max(84, originX))}px`;
+    message.style.top = `${Math.max(54, originY - 38)}px`;
+    layer.append(message);
+    requestAnimationFrame(() => message.classList.add("visible"));
+    window.setTimeout(() => message.classList.add("leaving"), 1300);
+    window.setTimeout(() => message.remove(), 1700);
+
     for (let index = 0; index < 7; index += 1) {
       const sparkle = document.createElement("span");
       sparkle.className = "sparkle";
