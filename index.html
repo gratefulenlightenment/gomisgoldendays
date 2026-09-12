@@ -306,6 +306,19 @@
   .calculator-source a{color:var(--charcoal-soft);}
   @keyframes goldenReveal{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
 
+  /* ---------- CARE PREVIEW ---------- */
+  .care-preview{background:var(--cream);}
+  .care-preview .head{text-align:center;max-width:650px;margin:0 auto 38px;}
+  .care-preview .head p{color:var(--charcoal-soft);font-size:1.02rem;}
+  .care-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;max-width:940px;margin:0 auto;}
+  .care-card{display:flex;flex-direction:column;gap:9px;padding:26px;background:#fff;border:1px solid var(--line);border-radius:10px;color:inherit;text-decoration:none;}
+  .care-card:hover{transform:translateY(-3px);box-shadow:0 18px 36px -28px rgba(58,58,56,.55);}
+  .care-card .care-kicker{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ochre-deep);font-weight:600;}
+  .care-card h3{font-size:1.18rem;line-height:1.35;}
+  .care-card p{color:var(--charcoal-soft);font-size:.92rem;flex:1;}
+  .care-card .read{font-size:.85rem;font-weight:500;color:var(--ochre-deep);}
+  .care-all{text-align:center;margin-top:28px;}
+
   /* ---------- GOLDEN WALK ---------- */
   .golden-walk-promo{padding:62px 0;background:linear-gradient(135deg,#f8edcf,#eef1df);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
   .golden-walk-card{display:grid;grid-template-columns:1fr auto;align-items:center;gap:34px;max-width:860px;margin:0 auto;padding:38px 42px;border:1px solid rgba(201,162,75,.3);border-radius:24px;background:rgba(255,253,249,.78);box-shadow:0 18px 42px -32px rgba(58,58,56,.48);}
@@ -542,6 +555,38 @@
   </div>
 </section>
 
+<!-- SENIOR DOG CARE -->
+<section class="care-preview" id="senior-dog-care" aria-labelledby="care-preview-title">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow">Practical guides</div>
+      <h2 class="section-title" id="care-preview-title">Senior dog care, from life with Gomi</h2>
+      <p>What we noticed at home, what veterinary guidance helped us understand, and what is worth bringing to your own vet.</p>
+    </div>
+    <div class="care-grid">
+      <a class="care-card" href="/senior-dog-eye-care/">
+        <span class="care-kicker">Eyes</span>
+        <h3>When an older dog's eye turns cloudy</h3>
+        <p>What cloudiness can mean, how we made daily drops calmer for Gomi, and when an eye change needs prompt attention.</p>
+        <span class="read">Read the eye care guide →</span>
+      </a>
+      <a class="care-card" href="/senior-dog-sleeping-more/">
+        <span class="care-kicker">Sleep</span>
+        <h3>When a senior dog starts sleeping more</h3>
+        <p>How to compare a longer nap with your dog's usual pattern and record the changes that matter.</p>
+        <span class="read">Read the sleep guide →</span>
+      </a>
+      <a class="care-card" href="/senior-dog-nutrition/">
+        <span class="care-kicker">Nutrition</span>
+        <h3>Feeding priorities in the senior years</h3>
+        <p>The practical questions that matter more than a "senior" label, plus the everyday routine we use with Gomi.</p>
+        <span class="read">Read the nutrition guide →</span>
+      </a>
+    </div>
+    <p class="care-all"><a class="btn btn-ghost" href="/senior-dog-care-guide/">View the complete care guide →</a></p>
+  </div>
+</section>
+
 <!-- GOLDEN WALK GAME -->
 <section class="golden-walk-promo" id="golden-walk">
   <div class="wrap">
@@ -597,8 +642,8 @@
 <section class="favorites" id="favorites">
   <div class="head">
     <div class="eyebrow">Gomi's Favorites</div>
-    <h2 class="section-title">The things Gomi actually loves</h2>
-    <p style="color:var(--charcoal-soft);">A few of the everyday comforts that make Gomi's golden days a little cozier.</p>
+    <h2 class="section-title">Everyday things we use with Gomi</h2>
+    <p style="color:var(--charcoal-soft);">Why each item works in our routine — and what to check before deciding whether it fits your dog.</p>
   </div>
   <div class="fav-grid">
     <a class="fav-card" href="https://www.amazon.com/dp/B08CXGYW1Q?tag=gomithesupery-20" target="_blank" rel="noopener sponsored">
@@ -608,7 +653,7 @@
       </picture>
       <div class="body">
         <h3>Cozy Pet Bed</h3>
-        <p>A comfortable pet bed for your furry friend. Perfect for cats and small to medium dogs. They'll love it!</p>
+        <p>Gomi curls into this soft, raised-edge bed for naps. Check the dimensions and entry height against your dog's sleeping position and mobility; a cozy bed is not a treatment for pain.</p>
         <span class="shop">Shop on Amazon →</span>
       </div>
     </a>
@@ -619,7 +664,7 @@
       </picture>
       <div class="body">
         <h3>Tangle-Free Dog Leash</h3>
-        <p>This dog leash is a lifesaver for walks. Smooth, tangle-free, and easy to control.</p>
+        <p>We use this leash on Gomi's everyday walks, where the tangle-free design helps when she changes direction. Choose the length and control style that fit your dog and walking area.</p>
         <span class="shop">Shop on Amazon →</span>
       </div>
     </a>
@@ -630,7 +675,7 @@
       </picture>
       <div class="body">
         <h3>Durable Dog Toys</h3>
-        <p>These durable dog toys are perfect for small and medium dogs. Great for teething!</p>
+        <p>For Gomi's indoor play, we look for pieces that are easy for a small dog to carry. Match any toy to your dog's size and chewing style, inspect it often, and supervise play.</p>
         <span class="shop">Shop on Amazon →</span>
       </div>
     </a>
@@ -641,7 +686,7 @@
       </picture>
       <div class="body">
         <h3>Flying Ring</h3>
-        <p>This flying ring is perfect for playing with your furry friend!</p>
+        <p>This lightweight ring gives Gomi a simple outdoor chase-and-carry game. Keep throws low for a senior dog and stop if running, jumping, or sharp turns look uncomfortable.</p>
         <span class="shop">Shop on Amazon →</span>
       </div>
     </a>
@@ -652,7 +697,7 @@
       </picture>
       <div class="body">
         <h3>Gentle Eye Wash</h3>
-        <p>This eye wash soothes and cleans my pup's eyes perfectly. A must-have!</p>
+        <p>We use this wash to clean around Gomi's eyes as part of her routine. Eye products are not interchangeable, and redness, pain, or discharge needs veterinary guidance.</p>
         <span class="shop">Shop on Amazon →</span>
       </div>
     </a>
@@ -663,7 +708,7 @@
       </picture>
       <div class="body">
         <h3>Soothing Eye Lube</h3>
-        <p>My fur babies' eye health is a priority, and this eye lube makes it so easy to keep their eyes moist!</p>
+        <p>We use this lubricant for moisture in Gomi's vet-guided eye routine. It does not replace prescribed medication; ask your vet which product and schedule are appropriate.</p>
         <span class="shop">Shop on Amazon →</span>
       </div>
     </a>
