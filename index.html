@@ -232,6 +232,14 @@
   .favorites-story{max-width:760px;margin:0 auto 36px;padding:0 24px;color:var(--charcoal-soft);}
   .favorites-story h3{color:var(--charcoal);margin-bottom:16px;}
   .favorites-story p{margin-bottom:18px;}
+  .favorites-archive{max-width:988px;margin:0 auto 36px;padding:0 24px;}
+  .favorites-archive h3{margin-bottom:12px;scroll-margin-top:90px;}
+  .favorites-archive > p{max-width:760px;color:var(--charcoal-soft);margin-bottom:24px;}
+  .favorites-media{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;}
+  .favorites-media figure{min-width:0;margin:0;background:var(--cream-deep);border:1px solid var(--line);border-radius:8px;overflow:hidden;}
+  .favorites-media img,.favorites-media video{display:block;width:100%;height:auto;aspect-ratio:3/4;object-fit:contain;background:var(--cream-deep);}
+  .favorites-media figcaption{padding:16px;font-size:.9rem;color:var(--charcoal-soft);}
+  .favorites-media figcaption strong{display:block;color:var(--charcoal);margin-bottom:6px;}
   .fav-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:940px;margin:0 auto;}
   .fav-card{
     background:var(--cream-deep);border:1px solid var(--line);border-radius:8px;overflow:hidden;
@@ -335,7 +343,7 @@
     .hero{grid-template-columns:1fr;gap:38px;padding:52px 0 60px;text-align:left;}
     .hero h1{font-size:2.4rem;}
     .hero-img{max-width:340px;}
-  .journal .wrap{grid-template-columns:1fr;gap:40px;}.fav-grid{grid-template-columns:1fr 1fr;}}
+  .journal .wrap{grid-template-columns:1fr;gap:40px;}.fav-grid,.favorites-media{grid-template-columns:1fr 1fr;}}
   @media(max-width:720px){
     .calculator-card{padding:28px 20px;}
     .calculator-form{grid-template-columns:1fr;gap:14px;}
@@ -391,7 +399,7 @@
     .film-play::before{margin-left:23px;border-top-width:10px;border-bottom-width:10px;border-left-width:16px;}
     .film-credit{font-size:.76rem;line-height:1.65;padding:0 8px;}
   }
-  @media(max-width:520px){.fav-grid{grid-template-columns:1fr;}}
+  @media(max-width:520px){.fav-grid,.favorites-media{grid-template-columns:1fr;}}
 </style>
 </head>
 <body>
@@ -652,10 +660,34 @@
     <h3 id="favorites-story-title">Why these are Gomi's favorites</h3>
     <p>This is a small collection from our walks, playtime, naps, and daily eye care, not a catalog of products we have only read about. The links below are affiliate links: if you buy through them, we may earn a commission at no extra cost to you. What follows is my own experience with Gomi, rather than the seller's description or a promise that every dog will have the same experience.</p>
     <p>The <strong>dog leash</strong> is here because I like this brand enough to keep using it. It extends and retracts with plenty of room for Gomi to move, and it is lightweight and comfortable to use. Even with those moving parts, both leashes have held up very well and feel sturdy in everyday use. One leash has been with us for more than seven years and the other for more than five, without a problem with either. I bought the second for a different color, not because the first broke, and I still alternate between them — more than twelve years of use between the two.</p>
-    <p>The <strong>dog toy</strong> earns its place in a simpler way: when I ask Gomi to bring a toy, this is the one she brings first. Its length also makes it comfortable for us to play tug together. The <strong>Flying Ring</strong> is her outdoor favorite. She loves going after it, and I have videos of her chasing it. It has lasted well in our use, even when she mouths and chews it, without easily breaking apart. That is how it has held up with Gomi, not a claim that it is indestructible or suitable for every dog's chewing style.</p>
+    <p>The <strong>dog toy</strong> earns its place in a simpler way: when I ask Gomi to bring a toy, this is the one she brings first. Its length also makes it comfortable for us to play tug together. The <strong>Flying Ring</strong> is her outdoor favorite. She loves going after it; the family video below shows her chasing and bringing back her flying disc in 2019. It has lasted well in our use, even when she mouths and chews it, without easily breaking apart. That is how it has held up with Gomi, not a claim that it is indestructible or suitable for every dog's chewing style.</p>
     <p>The eye products belong to a different part of our day. We use <strong>Gentle Eye Wash</strong> daily to clean away debris as part of Gomi's veterinarian-guided care. With the wash we used before, she would turn her head away; with this one, she stays still and does not seem bothered during cleaning. That difference is why I like it.</p>
     <p>With <strong>Soothing Eye Lube</strong>, the difference I notice is the amount of discharge the next morning. On occasions when I forgot it for about a day, there was much more eye discharge the following morning. When we use it as directed, I usually find very little. I am describing what I see with Gomi, not a controlled test or evidence that it treats the cause of an eye problem. Missing a day is not an experiment I recommend.</p>
     <p>Gomi's eye treatment and schedule come from her veterinarian. Depending on her condition, we go back roughly every two weeks, and sooner if my daily checks for bleeding or changes in discharge raise a concern. Ask your own vet which eye products are appropriate, and do not change or skip prescribed care to try these. Our <a href="/senior-dog-eye-care/">eye-care story and observation prompts</a> explain the routine in more detail.</p>
+  </div>
+  <div class="favorites-archive" aria-labelledby="favorites-archive-title">
+    <h3 id="favorites-archive-title">From Gomi's family archive</h3>
+    <p>Our own photos and videos show the walks, games, and naps behind these choices. These are older moments, not demonstrations of Gomi's current activity level or product safety tests. The items shown are the ones we used at the time; colors and versions in today's listings may differ. The short videos have no audio and play only when you press play.</p>
+    <div class="favorites-media">
+      <figure>
+        <video controls playsinline preload="none" poster="images/gomi-flying-disc-2019.jpg" width="540" height="960" aria-label="Gomi chasing and retrieving her flying disc in October 2019" aria-describedby="favorites-fetch-caption">
+          <source src="videos/gomi-flying-disc-fetch-2019.mp4" type="video/mp4">
+          <a href="videos/gomi-flying-disc-fetch-2019.mp4">Watch Gomi's flying-disc fetch video</a>.
+        </video>
+        <figcaption id="favorites-fetch-caption"><strong>A favorite fetch game · October 2019</strong>Gomi runs after her orange flying disc, picks it up, and brings it back. The poster photo is from the same day's playtime. This 20-second clip shows why I call it her outdoor favorite, not how much exercise every senior dog should do.</figcaption>
+      </figure>
+      <figure>
+        <video controls playsinline preload="none" poster="images/gomi-leash-walk-2022.jpg" width="540" height="960" aria-label="Gomi exploring beside a path on her retractable leash in June 2022" aria-describedby="favorites-leash-caption">
+          <source src="videos/gomi-leash-walk-2022.mp4" type="video/mp4">
+          <a href="videos/gomi-leash-walk-2022.mp4">Watch Gomi's leash-walk video</a>.
+        </video>
+        <figcaption id="favorites-leash-caption"><strong>Room to explore · June 2022</strong>A seven-second moment from one of our walks: Gomi pauses and changes direction while the leash gives her room to explore. It shows our everyday use; my long-term durability experience is described above.</figcaption>
+      </figure>
+      <figure>
+        <img src="images/gomi-cozy-bed-2019.jpg" alt="Gomi resting under her strawberry-patterned blanket in a soft bed with a raised edge" width="800" height="800" loading="lazy">
+        <figcaption><strong>A cozy resting spot · November 2019</strong>Gomi rests under her blanket with the bed's soft, raised edge around her. This is a quiet moment from home, rather than a seller's product photo or a claim about medical benefits.</figcaption>
+      </figure>
+    </div>
   </div>
   <div class="fav-grid">
     <a class="fav-card" href="https://www.amazon.com/dp/B08CXGYW1Q?tag=gomithesupery-20" target="_blank" rel="noopener sponsored">
