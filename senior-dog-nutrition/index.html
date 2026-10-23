@@ -24,6 +24,8 @@
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <link rel="stylesheet" href="/page.css">
+<link rel="stylesheet" href="../care-tools.css">
+<script src="../care-tools.js" defer></script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -41,7 +43,7 @@
       },
       "publisher": { "@type": "Organization", "name": "Gomi's Golden Days" },
       "datePublished": "2026-08-28",
-      "dateModified": "2026-09-30",
+      "dateModified": "2026-10-24",
       "mainEntityOfPage": "https://gomisgoldendays.com/senior-dog-nutrition/"
     },
     {
@@ -103,7 +105,7 @@
 <main id="main" tabindex="-1"><div class="wrap">
   <div class="eyebrow">Caring for a senior dog</div>
   <h1>Senior dog nutrition: what actually changes, and <em>how to read the label</em></h1>
-  <p class="updated">By <a href="/about/#author" rel="author">Gomi's human</a> — written from 11+ years alongside Gomi (<a href="https://www.instagram.com/gomithesuperyorkie/">@gomithesuperyorkie</a>), not a vet's office · Last updated: September 30, 2026 · about a 10-minute read</p>
+  <p class="updated">By <a href="/about/#author" rel="author">Gomi's human</a> — written from 11+ years alongside Gomi (<a href="https://www.instagram.com/gomithesuperyorkie/">@gomithesuperyorkie</a>), not a vet's office · Last updated: October 24, 2026 · about a 10-minute read</p>
 
   <figure class="post-hero">
     <img src="/images/appetite-gomi.jpg" alt="Gomi sitting and waiting quietly, looking up" width="1120" height="1400" style="height:auto;" loading="eager" onerror="this.closest('figure').style.display='none'">
@@ -167,6 +169,25 @@
   </table>
   </div>
   <p>UC Davis also names the things to keep out entirely — chocolate, macadamia nuts, garlic, onions, grapes and raisins — and adds that some items may not suit an individual dog, which is a question for your vet rather than for an internet table.</p>
+
+  <section class="care-tool" id="treat-budget-tool" aria-labelledby="treat-budget-title">
+    <h2 id="treat-budget-title">Plan a treat and reward budget</h2>
+    <p>Use a daily calorie target agreed with your veterinarian and the calories per treat from your package. This calculator does not estimate calorie needs or recommend a food. The 10% general ceiling comes from <a href="https://www.vetmed.ucdavis.edu/sites/g/files/dgvnsk491/files/inline-files/treats-guidelines-for-dogs-2020.pdf" target="_blank" rel="noopener">UC Davis</a>; your vet may set a lower limit or advise against particular treats, especially with a diagnosed condition or therapeutic diet.</p>
+    <p class="tool-privacy">No signup. Values are calculated on this page, not submitted or saved by this tool. Count dental chews, toppers, pill pockets, and other extras once each. This allowance is part of the daily target, not extra food on top.</p>
+    <noscript><p>JavaScript is off. Daily target × allowed percentage ÷ 100, minus other extras, gives the remaining treat budget. Divide by calories per treat and round down for whole treats.</p></noscript>
+    <form id="treat-budget-form" inert>
+      <div class="tool-fields">
+        <label>Vet-agreed daily calorie target (kcal)<input name="daily" type="number" min="0.01" step="any" required inputmode="decimal"></label>
+        <label>Allowed treats and extras (%)<input name="percent" type="number" min="0" max="10" step="any" value="10" required inputmode="decimal"></label>
+        <label>Other extras already counted today (kcal)<input name="extras" type="number" min="0" step="any" value="0" required inputmode="decimal"></label>
+        <label>Calories per whole treat (kcal)<input name="perTreat" type="number" min="0.01" step="any" required inputmode="decimal"></label>
+        <label>Number of rewards to split across (optional)<input name="rewards" type="number" min="1" step="1" inputmode="numeric"></label>
+      </div>
+      <div class="tool-actions"><button type="submit">Calculate budget</button><button type="button" class="secondary" id="treat-budget-example">Load illustrative example</button><button type="reset" class="secondary">Clear</button></div>
+    </form>
+    <p class="tool-status" id="treat-budget-status" role="status" aria-live="polite"></p>
+    <div class="tool-result" id="treat-budget-result" hidden><h3>Your calculation</h3><pre id="treat-budget-output"></pre></div>
+  </section>
 
   <h2>What this looks like in our house</h2>
   <p>I should be honest about where we've landed, because it is not where the aisle wanted us to end up.</p>
