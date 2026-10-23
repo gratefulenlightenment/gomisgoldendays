@@ -24,6 +24,8 @@
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <link rel="stylesheet" href="/page.css">
+<link rel="stylesheet" href="../care-tools.css">
+<script src="../care-tools.js" defer></script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -41,7 +43,7 @@
       },
       "publisher": { "@type": "Organization", "name": "Gomi's Golden Days" },
       "datePublished": "2026-07-20",
-      "dateModified": "2026-09-13",
+      "dateModified": "2026-10-24",
       "mainEntityOfPage": "https://gomisgoldendays.com/senior-dog-signs-checklist/"
     },
     {
@@ -92,7 +94,7 @@
 <main id="main" tabindex="-1"><div class="wrap">
   <div class="eyebrow">Caring for a senior dog</div>
   <h1>Senior dog signs checklist: 8 changes worth <em>noticing</em></h1>
-  <p class="updated">By <a href="/about/#author" rel="author">Gomi's human</a> — written from 11+ years alongside Gomi (<a href="https://www.instagram.com/gomithesuperyorkie/">@gomithesuperyorkie</a>), not a vet's office · Last updated September 13, 2026 · about a 6-minute read</p>
+  <p class="updated">By <a href="/about/#author" rel="author">Gomi's human</a> — written from 11+ years alongside Gomi (<a href="https://www.instagram.com/gomithesuperyorkie/">@gomithesuperyorkie</a>), not a vet's office · Last updated October 24, 2026 · about a 6-minute read</p>
 
   <figure class="post-hero">
     <img src="/images/signs-senior-face.jpg" alt="Gomi on an autumn walk, sitting among fallen leaves in a striped sweater" width="1139" height="1400" loading="eager" onerror="this.closest('figure').style.display='none'">
@@ -133,6 +135,29 @@
   </div>
 
   <div class="note">A calm, practical habit is to review the list once a week and write down changes when you first see them. Our <a href="/#signup">free Tiny Changes checklist</a> and the Golden Days journal offer printable and longer-form options, but the table above contains the core prompts.</div>
+
+  <section class="care-tool" id="vet-note-tool" aria-labelledby="vet-note-title">
+    <h2 id="vet-note-title">Make a one-page note for your vet</h2>
+    <p class="tool-intro">Turn what you noticed into a short summary to copy or print. These are your observations, not a diagnostic score or an interpretation of symptoms. For eye changes, include which eye, discharge or bleeding compared with usual, and whether the change was before or after prescribed care.</p>
+    <p class="tool-intro"><strong>Do not delay veterinary contact to complete this form.</strong> Sudden, severe, or worsening changes need prompt advice; breathing trouble or collapse needs urgent help.</p>
+    <p class="tool-privacy">No signup. This tool does not submit or save your entries. Copy or print before leaving; use Clear to remove the text from this page. Avoid entering personal contact details.</p>
+    <noscript><p>JavaScript is off. Copy the tracking-table headings above into a notebook instead.</p></noscript>
+    <form id="vet-note-form" inert>
+      <div class="tool-fields">
+        <label>Dog's name (optional)<input name="dog" maxlength="60" autocomplete="off"></label>
+        <label>When did you first notice it? (optional)<input name="onset" maxlength="120" placeholder="Date, time, or uncertain" autocomplete="off"></label>
+        <label class="tool-wide">Usual pattern<textarea name="baseline" required maxlength="300" placeholder="What is normal for your dog?"></textarea></label>
+        <label class="tool-wide">What changed?<textarea name="change" required maxlength="300" placeholder="Describe what you saw, frequency, and any other changes."></textarea></label>
+        <label>Current care (optional)<textarea name="care" maxlength="300" placeholder="Care or medicines already directed by your vet; any difficulty giving them."></textarea></label>
+        <label>Questions for the vet (optional)<textarea name="questions" maxlength="300" placeholder="What would you like to ask?"></textarea></label>
+      </div>
+      <div class="tool-actions"><button type="submit">Create vet summary</button><button type="reset" class="secondary">Clear</button></div>
+    </form>
+    <p class="tool-status" id="vet-note-status" role="status" aria-live="polite"></p>
+    <div class="tool-result" id="vet-note-result" hidden><h3>Your vet summary</h3><pre id="vet-note-output"></pre></div>
+    <div class="tool-actions"><button type="button" id="vet-note-copy" class="secondary" disabled>Copy summary</button><button type="button" id="vet-note-print" class="secondary" disabled>Print summary</button></div>
+    <p class="tool-privacy">If this in-app browser does not open a print dialog, copy the summary into a document or open this page in your usual browser to print. Review your browser's paper size and margins.</p>
+  </section>
 
   <h2>How to use the checklist</h2>
   <p>When you spot a change, record what happened, when it began, how often it occurs, and what else changed at the same time. Sudden or severe changes call for prompt veterinary advice; gradual changes that persist or worsen also deserve a call rather than automatically waiting for the next routine visit. A short written note — or a phone video of a stiff walk or unusual behavior — gives your vet a clearer starting point than memory alone.</p>
