@@ -1,0 +1,38 @@
+/* 홈에서 옮긴 상품 카드와 실사용 사진·영상의 기존 디자인을 유지합니다. */
+  .favorites{background:var(--cream);}
+  .favorites .head{text-align:center;max-width:560px;margin:0 auto 44px;}
+  .favorites-story{max-width:760px;margin:0 auto 36px;padding:0 24px;color:var(--charcoal-soft);}
+  .favorites-story h3{color:var(--charcoal);margin-bottom:16px;}
+  .favorites-story p{margin-bottom:18px;}
+  .favorites-archive{max-width:988px;margin:0 auto 36px;padding:0 24px;}
+  .favorites-archive h3{margin-bottom:12px;scroll-margin-top:90px;}
+  .favorites-archive > p{max-width:760px;color:var(--charcoal-soft);margin-bottom:24px;}
+  .favorites-media{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;}
+  .favorites-media figure{min-width:0;margin:0;background:var(--cream-deep);border:1px solid var(--line);border-radius:8px;overflow:hidden;}
+  .favorites-media img,.favorites-media video{display:block;width:100%;height:auto;aspect-ratio:3/4;object-fit:contain;background:var(--cream-deep);}
+  .favorites-media figcaption{padding:16px;font-size:.9rem;color:var(--charcoal-soft);}
+  .favorites-media figcaption strong{display:block;color:var(--charcoal);margin-bottom:6px;}
+  .fav-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:940px;margin:0 auto;}
+  .fav-card{
+    background:var(--cream-deep);border:1px solid var(--line);border-radius:8px;overflow:hidden;
+    transition:transform .2s, box-shadow .2s;text-decoration:none;color:inherit;display:flex;flex-direction:column;
+  }
+  .fav-card:hover{transform:translateY(-4px);box-shadow:0 20px 40px -24px rgba(58,58,56,.5);}
+  .fav-card img{width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;}
+  .fav-card .body{padding:20px;display:flex;flex-direction:column;flex:1;position:relative;}
+  .fav-card h3{font-size:1.1rem;margin-bottom:8px;}
+  .fav-card p{font-size:.9rem;color:var(--charcoal-soft);margin-bottom:14px;flex:1;}
+  .fav-card .shop{font-size:.85rem;font-weight:500;color:var(--ochre-deep);}
+  .favorites-media figure,.fav-card{scroll-margin-top:160px;}
+  .disclosure{text-align:center;font-size:.78rem;color:var(--charcoal-soft);margin-top:30px;font-style:italic;}
+
+.favorites-page>.wrap{width:min(1080px,92%);}
+.favorites-page h1{margin-bottom:12px;}
+.favorites .section-title{font-size:2.1rem;margin-bottom:20px;}
+.favorites h2,.favorites h3{font-family:'Lora',serif;font-weight:500;line-height:1.2;}
+.favorites{padding:38px 24px 0;}
+.favorites .favorites-story,.favorites .favorites-archive{padding:0;}
+.favorites picture{display:contents;}
+.fav-card img{display:block;}
+@media(max-width:880px){.fav-grid,.favorites-media{grid-template-columns:1fr 1fr;}}
+@media(max-width:520px){.fav-grid,.favorites-media{grid-template-columns:1fr;}.favorites{padding-left:4%;padding-right:4%;}}
